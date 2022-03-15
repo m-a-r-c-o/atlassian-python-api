@@ -285,11 +285,17 @@ Manage components
     # Get component
     jira.component(component_id)
 
+    # Get component related issues
+    jira.get_component_related_issues(component_id)
+
     # Create component
     jira.create_component(component)
 
     # Delete component
     jira.delete_component(component_id)
+
+    # Update component lead
+    jira.update_component_lead(component_id, lead)
 
     # Update component description
     jira.update_component_description(component_id, description)
