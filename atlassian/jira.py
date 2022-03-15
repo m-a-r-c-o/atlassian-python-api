@@ -435,6 +435,16 @@ class Jira(AtlassianRestAPI):
         base_url = self.resource_url("component")
         return self.put("{base_url}/{component_id}".format(base_url=base_url, component_id=component_id), data=data)
 
+    def update_component_description(self, component_id, description):
+        data = {"id": component_id, "description": description}
+        base_url = self.resource_url("component")
+        return self.put("{base_url}/{component_id}".format(base_url=base_url, component_id=component_id), data=data)
+
+    def update_component_name(self, component_id, name):
+        data = {"id": component_id, "name": name}
+        base_url = self.resource_url("component")
+        return self.put("{base_url}/{component_id}".format(base_url=base_url, component_id=component_id), data=data)
+
     """
     Configurations of Jira
     Reference: https://docs.atlassian.com/software/jira/docs/api/REST/8.5.0/#api/2/configuration

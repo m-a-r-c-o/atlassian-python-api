@@ -291,6 +291,12 @@ Manage components
     # Delete component
     jira.delete_component(component_id)
 
+    # Update component description
+    jira.update_component_description(component_id, description)
+
+    # Update component name
+    jira.update_component_name(component_id, name)
+
 Upload Jira plugin
 ------------------
 
